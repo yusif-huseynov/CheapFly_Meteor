@@ -1,0 +1,83 @@
+<template name="homeMain">
+    <div class="bg-home">
+        <!-- Left  -->
+        <div class="leftImage">
+            <img src="assates/New Project (4).png">
+        </div>
+
+        <!-- Right -->
+        <div class="rightSearch">
+            <!-- Text -->
+            <h2 class="textStart">{{_"homeTitle"}}</h2>
+
+            <!-- Form Search  -->
+            <form action="flights" class="search searchFlights">
+
+                <!-- From To -->
+                <div class="fromTo">
+                    <p>{{_'destination'}}</p>
+                    <!-- Input -->
+                    <div class=" inputContianer">
+                        <input type="text" list="fromCountry" value="{{getChagne.to}}" placeholder="{{_'from'}}" name="from"
+                            id="from" required>
+                        <i class="fa-solid fa-right-left"></i>
+                        <input type="text" list="toCountry" placeholder="{{_'to'}}" value="{{getChagne.from}}" id="to"
+                            name="to" required>
+                    </div>
+
+                    <datalist id="fromCountry">
+                        {{#each countryList}}
+                        <option value="{{this.city}}"></option>
+                        {{/each}}
+                    </datalist>
+                    <datalist id="toCountry">
+                        {{#each countryList}}
+                        <option value="{{this.city}}"></option>
+                        {{/each}}
+                    </datalist>
+
+                </div>
+                <br>
+                <!-- Dates -->
+                <div class="dates">
+                    <p>{{_"dates"}}</p>
+                    <!-- Input -->
+                    <div class="inputContianer">
+                        <input type="date" id="deportDate" name="date" required>
+                        <input type="date" id="dateInterval" name="dateInterval">
+                    </div>
+                </div>
+                <br>
+
+                <!-- Passangers -->
+                <div class="passangers">
+                    <p>{{_"passengers"}}</p>
+                    <!-- Input -->
+                    <div class="inputContianer">
+                        <div>
+                            <i class="fa-solid  adultsMinus fa-square-minus"></i>
+                            <input type="text" name="passangerCount" class="adultsCount" value={{getPassengers}}
+                                readonly>
+                            <i class="fa-solid  adultsPlus fa-square-plus"></i>
+
+                            <input type="radio" class="btn-check" value="Business" name="type" id="option1"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success mx-2" for="option1">B</label>
+
+                            <input type="radio" class="btn-check" value="Economy" name="type" id="option2"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success mx-2" for="option2">E</label>
+                        </div>
+                        <input type="submit" value="{{_'search'}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+    
+</template>

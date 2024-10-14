@@ -1,0 +1,37 @@
+<template name="login">
+    <div class="registerBox">
+
+        <div class="signUp_loginBox ">
+            <div class="signUp_Login">
+                <a href="/signUp">Sign up</a>
+                <a href="/login">Login</a>
+            </div>
+
+            <div class="inputBox">
+                <p>Log in to your account!</p>
+                <!-- Form  -->
+                <form id="loginForm">
+
+                    <p style="color: rgb(170, 35, 35); display: none;" id="incorrectPass">Email or Password incorrect !
+                    </p>
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Email" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                    <input type="password" class="form-control" placeholder="Password" id="loginPassword"
+                        aria-describedby="addon-wrapping">
+                    <!-- <a href="">Forget password ?</a> -->
+                    <br>
+                    <br>
+                    <button type="submit" id="loginBTN" > Login </button>
+
+                </form>
+            </div>
+
+            <div class="cloud cloud1">
+                <img
+                    src="https://images.vexels.com/media/users/3/145795/isolated/preview/05cd33059a006bf49006097af4ccba98-plane-in-flight-by-vexels.png" />
+            </div>
+
+
+        </div>
+    </div>
+</template>

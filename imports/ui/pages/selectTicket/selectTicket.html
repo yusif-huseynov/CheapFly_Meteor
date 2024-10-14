@@ -1,0 +1,134 @@
+<template name="selectTicket">
+
+    {{> selectSeatModal}}
+    <div class="textAbout">
+        <p>{{_"confirmTicket"}}</p>
+        <p>{{_"info"}}</p>
+    </div>
+    <br>
+
+    <div class="cardAbout">
+        {{#with getFlight}}
+        {{> card ticket=this}}
+        {{/ with}}
+    </div>
+
+    <div class="accordion p-4" id="accordionExample">
+        {{#each getPassengers}}
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-toggle="collapse" data-target="#accordion-{{id}}"
+                    aria-expanded="true" aria-controls="#{{id}}">
+                    {{_"passenger"}} {{id}}
+                </button>
+            </h2>
+            <div id="accordion-{{id}}" class="accordion-collapse collapse" aria-labelledby="#{{id}}"
+                data-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form class="form" id="form-{{id}}">
+                        <h3 class="mt-5">{{_"passInfo"}}</h3>
+                        <div class="d-flex">
+                            <!-- First Name Input -->
+                            <div class="col mx-2">
+                                <label for="firstName">{{_"firstName"}}</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                <small id="error-{{id}}-firstName" class="text-danger"></small>
+                            </div>
+
+                            <!-- Last Name Input -->
+                            <div class="col mx-2">
+                                <label for="lastName">{{_"lastName"}}</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                <small id="error-{{id}}-lastName" class="text-danger"></small>
+                            </div>
+
+                            <!-- Gender Input (as radio buttons) -->
+                            <div class="col mx-2">
+                                <label>{{_"passengerGender"}}</label>
+                                <div class="d-flex">
+
+                                    <div class="ms-2">
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="M"
+                                            required>
+                                        <label class="form-check-label" for="male">M</label>
+                                    </div>
+                                    <div class="ms-2">
+                                        <input class="form-check-input" type="radio" name="gender" id="female" value="F"
+                                            required>
+                                        <label class="form-check-label" for="female">F</label>
+                                    </div>
+                                    <small id="error-{{id}}-arrivalTime" class="text-danger"></small>
+                                </div>
+
+                            </div>
+
+                            <!-- Birthdate Input -->
+                            <div class="col mx-2">
+                                <label for="birthdate">{{_"birthdate"}}</label>
+                                <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                                <small id="error-{{id}}-birthdate" class="text-danger"></small>
+                            </div>
+                        </div>
+
+                        <h3 class="mt-5">{{_"docInfo"}}</h3>
+
+                        <div class="d-flex mt-2">
+                            <!-- First Name Input -->
+                            <div class="col mx-2">
+                                <label for="passportNumber">{{_"serialNumber"}}</label>
+                                <input type="text" class="form-control" id="passportNumber" name="passportNumber"
+                                    required>
+                                <small id="error-{{id}}-passportNumber" class="text-danger"></small>
+                            </div>
+
+                            <!-- Last Name Input -->
+                            <div class="col mx-2">
+                                <label for="passportCountry">{{_"passportCountry"}}</label>
+                                <select name="passportCountry" class="form-control" id="passportCountry">
+                                    {{#each getCountry}}
+                                    <option value="{{this.country}}">{{this.country}}</option>
+                                    {{/each}}
+                                </select>
+                                <small id="error-{{id}}-passportCountry" class="text-danger"></small>
+                            </div>
+
+                            <!-- Birthdate Input -->
+                            <div class="col mx-2">
+                                <label for="passportExpiredDate">{{_"passportExpireDate"}}</label>
+                                <input type="date" class="form-control" id="passportExpiredDate"
+                                    name="passportExpiredDate" required>
+                                <small id="error-{{id}}-passportExpiredDate" class="text-danger"></small>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col mt-2 mx-2">
+                                <label for="baggage-{{id}}">{{_"baggage"}} (kg)</label>
+                                <input placeholder="Baqaj" id="baggage-{{id}}" name="baggage" type="number" min="0"
+                                    class="form-control baggages" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+    <div class="buyBar">
+        <div class="passangers">
+            <p><i class="fa-regular fa-user"></i> <span>{{_"passengers"}} :</span> <span>{{Session "passCount"}}</span>
+            </p>
+        </div>
+
+
+        <div class="buyTicket">
+            <div>
+                <p>{{getPrice}} <i class="fa-solid fa-manat-sign"></i></p>
+                <span>{{_"allPassengers"}}</span>
+            </div>
+            <button data-target="#selectSeatModal" data-toggle="modal" class="btn btn-primary">Select Seat</button>
+            <button id="comfirm" class="btn bg-transparent text-white">{{_"confirm"}}</button>
+        </div>
+    </div>
+</template>

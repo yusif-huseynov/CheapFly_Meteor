@@ -1,0 +1,1034 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #0C314E !important;
+  /* position: relative; */
+}
+
+.bg-transparent{
+  background-color: transparent!important;
+}
+
+/* ----------------------------------------------------------- */
+
+
+.options_Open {
+  height: 150px !important;
+  transition: 0.7s !important;
+}
+
+
+
+/* 
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #194a8c;
+  padding: 1vw 2vw !important;
+  /* margin: 0 ; */
+/* z-index: 2; */
+/* position: absolute; */
+/* top: 0; */
+/* } */
+
+.navItem {
+  display: flex;
+
+}
+
+.bi-moon {
+  border: 1px solid gray;
+  border-radius: 50%;
+  color: white !important;
+  font-size: 1.6vw;
+  padding: 0.8vw 0.85vw;
+  ;
+}
+
+/* .navItem div {
+  display: flex;
+  align-items: center;
+  margin: 0 1vw;
+  padding: 0.8vw 1vw;
+  border-radius: 15px;
+  justify-content: space-between;
+  width: max-content;
+  filter: grayscale(100%);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.097);
+} */
+
+.fa-manat-sign {
+  margin-left: 0.5vw;
+}
+
+.fa-arrow-right-from-bracket {
+  margin: 0;
+  padding: 0;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.navItem div i {
+
+  margin-right: 1vw;
+}
+
+.moonIcon {
+  border-radius: 50%;
+  color: white !important;
+  font-size: 1.9vw;
+  padding: 0.5vw;
+  background-color: rgba(255, 255, 255, 0.097);
+}
+
+.homePage .moonIcon {
+  color: black;
+}
+
+/* .brandName img {
+  fill: white;
+} */
+
+
+/* .homePage .brandName img {
+  fill: black !important;
+} */
+
+/* .bg-home {
+  background-image: url('assates/ahy-7879-vw035-lr-1214.jpg');
+  height: 50vw;
+  display: flex;
+  justify-content: center; */
+/* align-items: center; */
+/* padding-top: 5vw;
+  top: 0;
+  width: 100%; */
+/* } */
+
+
+
+.dosntExist{
+  color: #30C391;
+  font-size: 3vw;
+  font-family:sans-serif;
+  margin-top: 11vw;
+  margin-left: 7vw;
+  font-weight: 900;
+
+}
+
+
+
+
+.options {
+  background-color: white;
+  width: 14vw;
+}
+
+/* 
+.search {
+  display: flex;
+  padding: 2vw;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  width: max-content;
+  margin: auto;
+} */
+
+/* .search input,
+.search div {
+  border: 1px solid lightgray;
+  width: 15vw;
+}
+
+.search input {
+  outline: none;
+  padding: 0 1vw;
+  color: gray;
+}
+
+.search input:first-child {
+  padding: 0 1vw;
+  margin: 0;
+} */
+
+
+/* #from {
+  border-radius: 15px 0 0 15px !important;
+} */
+
+
+.form-check-label {
+  margin-left: 1vw;
+}
+
+
+/* .search button {
+  border-radius: 0 15px 15px 0;
+  width: 5vw;
+  padding: 0.5vw;
+  border: 1px solid lightgray;
+}
+
+
+.search button i {
+  font-size: 2vw;
+  color: #292c35;
+} */
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+
+}
+
+.inputBox {
+  padding: 2vw;
+}
+
+
+#loginBTN {
+  background-color: rgb(39, 39, 174);
+  color: white;
+  border: none;
+  width: 100%;
+  height: 2.9vw;
+  font-size: 1.2vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 0.7vw;
+}
+
+#loginForm input {
+  margin: 1.5vw 0;
+}
+
+a:hover {
+  color: rgba(253, 253, 253, 0.612) !important;
+
+}
+
+.signUp_loginBox {
+  width: 35%;
+  padding-top: 0;
+  position: relative;
+  z-index: 999;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.307) !important;
+  color: white;
+}
+
+#loginForm a {
+  color: white !important;
+}
+
+.registerBox {
+  width: 100%;
+  background-color: #0C314E;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 4.5vw);
+  width: 100%;
+
+}
+
+/* .search div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+} */
+
+/* .search .passanger {
+  padding: 0 4vw;
+  background-color: white !important;
+} */
+
+/* 
+.search .passanger span {
+  color: gray;
+  font-size: medium;
+
+} */
+/* 
+.search .passanger p span {
+  color: #292c35 !important;
+  font-size: 1.2vw;
+  font-weight: 600
+}
+ */
+/* 
+.searchNav a {
+  color: white;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.097);
+  text-decoration: none;
+  padding: 1vw;
+  border-radius: 15px 15px 0 0;
+  display: block;
+  margin-right: 0.6vw;
+} */
+
+.searchNav {
+  display: flex;
+}
+
+
+.passanger {
+  cursor: pointer;
+}
+
+
+.option {
+  position: absolute;
+  width: 15vw !important;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  left: 47vw;
+  height: 0;
+  overflow: hidden;
+  transition: 0.7s !important;
+  top: 6.5vw;
+  border: none !important;
+}
+
+.option div {
+  display: flex;
+  border: none;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+
+
+.option div:first-child p:last-child {
+  width: max-content !important;
+  padding: 0 0.5vw !;
+  margin-left: 1vw;
+  display: flex;
+  align-items: center;
+}
+
+.adultsCount {
+  padding: 0 !important;
+  margin: 0 5px 0 10px !important;
+}
+
+.option div:first-child p:last-child input {
+  margin: 0 0.1vw;
+}
+
+.option .countPassangers {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.275);
+}
+
+.d-block {
+  padding-top: 1vw;
+  display: flex;
+
+}
+
+
+.fa-plane-arrival,
+.fa-plane-departure {
+  color: lightgray;
+  margin: 1vw;
+}
+
+
+.textAbout {
+  margin-top: 5vw !important;
+}
+
+.option .fa-solid {
+  font-size: 1.5vw;
+}
+
+
+.form-check-input[type=radio] {
+  border-radius: 2vw !important;
+}
+
+.signUp_Login a {
+  padding: 1.5vw;
+  display: block;
+  width: 50%;
+  border: 1px solid gray;
+  border-top: none;
+  border-left: none;
+  text-align: center;
+  text-decoration: none;
+  color: white !important;
+  font-weight: 600;
+  font-size: 1.2vw !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+.signUp_Login a:last-child {
+  border-right: none;
+
+}
+
+
+.signUp_Login {
+  display: flex;
+}
+
+
+#signUpForm input,
+#loginForm input {
+  margin: 1.5vw 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 15px;
+}
+
+
+.form-check {
+  width: 5vw !important;
+  padding: 0 !important;
+}
+
+#signBTN,
+#loginBTN {
+  background-color: rgb(39, 39, 174);
+  color: white;
+  border: none;
+  width: 100%;
+  height: 2.9vw;
+  font-size: 1.2vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 0.7vw;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 15px;
+}
+
+.form-check span {
+  margin-left: 0.2vw;
+
+}
+
+hr {
+  color: black;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  overflow: hidden;
+}
+
+
+.cloud {
+  position: absolute;
+  top: 0px;
+  right: -500px;
+  opacity: .7;
+  animation: cloud 10s linear 0s infinite reverse;
+  z-index: -99;
+  box-sizing: content-box !important;
+}
+
+
+@keyframes cloud {
+  from {
+    right: -500px;
+    top: -200px;
+    opacity: 0;
+  }
+
+  to {
+    right: 150%;
+  }
+}
+
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.modal-content {
+  width: 900px !important;
+  height: 550px;
+  margin-left: -150px;
+}
+
+.card-main {
+  padding: 1.5rem;
+  background-color: #edf1f4;
+  height: 100vh;
+  position: relative;
+  top: 90px;
+}
+
+.flight-card {
+  border: 1px solid  #b760ee;
+  border-radius: 24px;
+  padding: 20px;
+  background: white;
+  /* box-shadow: 0px 9px 4px rgba(0, 0, 0, 0.01), 0px 2px 2px rgba(0, 0, 0, 0.09); */
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 1.2vw;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 0px 0px 3px;
+}
+
+.airline-tag {
+  background-color: #edf1f4;
+  color: #6e75a3;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 999px;
+  height: 2.7rem;
+  width: 12rem;
+  margin-bottom: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.destionation {
+  max-width: 13rem;
+  color: #6e75a3;
+  word-wrap: break-word;
+}
+
+.destionation small {
+  color: #6e75a3;
+  font-size: 0.8rem;
+  font-weight: 400;
+  display: block;
+}
+
+.squared {
+  width: 220px;
+  border-radius: 12px;
+  padding: 1.3rem;
+  height: 240px;
+  border: 1px solid transparent;
+  background-color: #f2f5fb;
+}
+
+.squared h4 {
+  font-size: 2.3rem;
+  color: #01357e;
+  font-weight: 500;
+}
+
+.squared small {
+  color: #6e7583;
+}
+
+.squared:hover {
+  border: 3px solid #0C314E;
+}
+
+.business {
+  background-color: #e4e4e7;
+}
+
+.form-group.inline-fields .form-control {
+  display: inline-block;
+}
+
+.packet {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  /* align-items: center; */
+  height: 400px;
+  border: 1px solid #6e7583;
+}
+
+
+
+.packet button,
+ul {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  color: #6e7583;
+}
+
+.modal small {
+  font-size: 15px;
+  text-align: center;
+  color: #6e7583;
+}
+
+
+.form-check {
+  position: relative;
+  margin-left: 5vw;
+}
+
+.form-check-input {
+  margin: 5px 10px;
+  border-radius: none !important;
+
+}
+
+.option input {
+  width: 1vw;
+  border: none;
+  outline: none;
+}
+
+
+.option div p {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+
+
+.textAbout {
+  width: 80%;
+  margin: auto;
+}
+
+
+.textAbout p:first-child {
+  font-size: 3vw;
+  color: #30C391;
+  font-weight: 600;
+  margin: 0 !important;
+padding: 0 !important;
+}
+
+.textAbout p:last-child {
+  font-size: 1vw;
+  color: white;
+
+}
+
+
+.cardAbout {
+  margin: auto;
+  width: 80%;
+}
+
+
+.buyBar {
+  background-color: rgb(197 47 92);
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding: 0 2vw;
+  height: 5vw;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* .passangers {
+  display: flex;
+  width: 40%;
+}
+
+.passangers i {
+
+  margin-right: 0.5vw;
+}
+
+.passangers p {
+  margin: 0 1vw;
+
+} */
+
+
+.buyTicket {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+
+.buyTicket p {
+  font-size: 1.8vw;
+  align-items: center;
+  font-weight: 600;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.buyTicket span {
+
+  font-size: 0.7vw;
+  align-items: center;
+  font-weight: 100;
+  color: rgb(210, 182, 182);
+}
+
+/*  Tables */
+table {
+  /* background-color: #w */
+  background-color: rgb(243, 242, 241);
+  margin-top: 6vw;
+  color: white !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+th,
+tr {
+  height: 70px;
+  color: #A4A6B3;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+  height: 70px;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.modal-body {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.seat-container {
+  flex-wrap: wrap;
+}
+
+/* .seat {
+  width: 50px;
+  margin: 0px 10px;
+} */
+
+.seat>svg {
+  width: 50px;
+  margin: 5px;
+}
+
+.seat>.selected>rect {
+  fill: green !important;
+}
+
+
+.seat>.taken>rect {
+  fill: red !important;
+}
+
+
+.seat-item {
+  flex-basis: calc(14% - 10px);
+}
+
+.seat-item:nth-child(3n) {
+  margin-right: 150px;
+}
+
+.seat-item:nth-child(6n) {
+  margin-right: 0px !important;
+}
+
+.business-seat:nth-child(2n) {
+  margin-right: 270px !important;
+}
+
+.business-seat:nth-child(4n) {
+  margin-right: 0px !important;
+}
+
+.business-seat {
+  flex-basis: calc(15% - 10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+nav {
+  display: flex;
+  padding: 1vw 2vw;
+  justify-content: space-between;
+  background-color: #0C314E;
+  height: 4.5vw;
+  width: 100%;
+  align-items: center;
+}
+
+.brandName {
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.brandName i {
+  font-size: 2vw;
+  margin-right: 0.5vw;
+}
+
+.brandName span {
+  font-size: 1.5vw;
+  font-family: monospace;
+  color: white;
+}
+
+
+.navItem {
+  width: 50%;
+  padding: 0 2vw;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.navItem a:first-child,
+.navItem a:nth-child(2) {
+  color: white;
+  font-size: 1vw;
+  margin: 0 1vw;
+  padding: 0.5vw 1.5vw;
+  border-radius: 0.7vw;
+  border: 2px solid white;
+  transition: 0.5s;
+}
+
+.navItem>a:first-child {
+  border: none;
+  border-radius: 0 !important;
+  transition: 0.7s;
+  color: #30C391 !important;
+}
+
+.navItem>a:first-child:hover {
+  border: none;
+  color: white !important;
+  border-bottom: 2px solid #30C391 !important;
+}
+
+.signUp {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-around;
+}
+
+.nickName {
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  transition: 0.7s;
+  cursor: default;
+}
+
+.datalist {
+  background-color: transparent;
+}
+
+
+.navItem span {
+  color: white;
+}
+
+.navItem i {
+  margin-right: 0.4vw;
+}
+
+.navItem .signUp a:first-child:hover,
+.navItem .signUp a:nth-child(2):hover {
+  background-color: #30C58E;
+  color: white !important;
+  margin: 0 1vw;
+  border: none;
+  padding: 0.45vw 1.45vw;
+}
+
+
+
+.bg-home {
+  background-color: #0C314E;
+  display: flex;
+  height: calc(100vh - 4.5vw);
+  min-height: calc(100vh - 4.5vw);
+  justify-content: space-between;
+}
+
+.leftImage {
+  display: flex;
+  align-items: end;
+  width: 40%;
+
+}
+
+
+.rightSearch {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+  height: 40%;
+  margin-top: 20vh;
+  width: 40%;
+  margin-right: 10vw;
+}
+
+.rightSearch h2 {
+  color: #30C391;
+  font-size: 2.5vw;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.searchFlights {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: white;
+  border-radius: 1vw;
+  padding: 2.5vw;
+  margin-top: 1vw;
+  height: 400px;
+  /* position: fixed; */
+  right: 45px;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 0px 0px 3px;
+}
+
+#econom>div h4 {
+  color :rgb(167, 14, 111);
+}
+
+
+
+#econom:hover {
+  border: 1px solid rgb(167, 14, 111);;
+  border-radius:1vw ;
+  transition: 0.5s;
+}
+
+.inputContianer {
+  display: flex !important;
+  margin: 5px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.inputContianer input {
+  width: 45%;
+  border: 1px solid lightgray;
+  border-radius: 9px;
+  padding: 0.5vw 1vw;
+  appearance: none;
+  outline: none;
+}
+
+
+.fa-right-left {
+  border: none;
+  border-radius: 50%;
+  padding: 0.5vw;
+  background-color: #30C391;
+  color: white;
+}
+
+
+.inputContianer p {
+  color: #32415e;
+}
+
+.passangers input:last-child {
+  background-color: #b760ee;
+  color: white;
+}
+
+
+.passangers .inputContianer div input {
+  width: 10%;
+  font-size: 1.5vw;
+  padding: 0 0.7vw !important;
+}
+
+.passangers div {
+  display: flex;
+  align-items: center;
+}
+
+
+.passangers div .fa-solid {
+  color: #b760ee;
+  font-size: 2vw;
+  margin: 0.4vw;
+}
+
+.passangers input[type="radio"] {
+  margin: 0 0.5vw;
+  color: red;
+}
+
+.position-fixed {
+  top: 25vh;
+}
+
+
+#lng option {
+  color: white;
+  background-color: #0C314E;
+  border: none !important;
+}
+
+
+
+
+#lng {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border: 1px solid  white;
+  width: 15% !important;
+  border-radius: 1vw !important;
+  text-align: center;
+  margin-left: 2vw;
+  transition: 0.5s;
+}
+
+#lng:hover {
+  background-color: #30C391;
+  border: none;
+}

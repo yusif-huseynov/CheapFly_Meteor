@@ -1,0 +1,31 @@
+<template name="signUp">
+    <div class="registerBox">
+
+        <div class="signUp_loginBox">
+            <div class="signUp_Login">
+                <a href="./signUp">Sign up</a>
+                <a href="/login">Login</a>
+            </div>
+
+            <div class="inputBox">
+                <p>Let`s create your account!</p>
+
+                <!-- Form  -->
+                <form action="" id="signUpForm">
+                    <p class="text-danger alertText" style="display: none;">Müəllumatların tam olmasına diqqət edin !</p>
+                    <input type="text" class="form-control" placeholder="First Name" id="signUp_firstName" value="{{getChangeInput.firstName}}">
+                    <input type="text" class="form-control" placeholder="Last Name" id="signUp_lastName" value="{{getChangeInput.lastName}}">
+                    <input type="text" class="form-control" placeholder="FIN" id="FIN" value="{{getChangeInput.finCode}}" minlength="7" maxlength="7">
+                    <input type="email" class="form-control" placeholder="Email" id="signUpEmail">
+                    <input type="password" class="form-control" placeholder="Password" id="signUpPassword">
+                    <button type="submit" id="signBTN"> Sign Up </button>
+                </form>
+            </div>
+
+        </div>
+
+        
+
+
+    </div>
+</template>

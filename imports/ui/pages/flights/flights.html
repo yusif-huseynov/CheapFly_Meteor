@@ -1,0 +1,66 @@
+<template name="flights">
+    <div class="card-main top-0 h-100 bg-home searchSection">
+        <div>
+             {{#if getTickets}}
+                 {{#each getTickets}}
+                 {{> card ticket=this}}
+                 {{/each}}
+            
+            {{else}}  
+            <p class="dosntExist">{{_"notFound"}}</p>
+            {{/if}} 
+        </div>
+
+
+        {{#with getTicketSearch }}
+        <form action="flights" class="search position-fixed searchFlights">
+
+            <!-- From To -->
+            <div class="fromTo">
+                <p>{{_"destination"}}</p>
+                <!-- Input -->
+                <div class=" inputContianer">
+                    <input type="text" value="{{from}}" placeholder="{{_'from'}}" name="from" id="from" required>
+                    <i class="fa-solid fa-right-left"></i>
+                    <input type="text" placeholder="{{_'to'}}" value="{{to}}" id="to" name="to" required>
+                </div>
+
+            </div>
+            <br>
+            <!-- Dates -->
+            <div class="dates">
+                <p>{{_"dates"}}</p>
+                <!-- Input -->
+                <div class="inputContianer">
+                    <input value="{{date}}" type="date" id="deportDate" name="date" required>
+                    <input type="date" value="{{dateInterval}}" id="dateInterval" name="dateInterval">
+                </div>
+            </div>
+            <br>
+
+            <!-- Passangers -->
+            <div class="passangers">
+                <p>{{_"passengers"}}</p>
+                <!-- Input -->
+                <div class="inputContianer">
+                    <div>
+                        <i class="fa-solid  adultsMinus fa-square-minus"></i>
+                        <input type="text" name="passangerCount" class="adultsCount" value={{getPassengers}} readonly>
+                        <i class="fa-solid  adultsPlus fa-square-plus"></i>
+
+                        <input type="radio" class="btn-check" value="Business" name="type" id="option1"
+                            autocomplete="off">
+                        <label class="btn btn-outline-success mx-2" for="option1">B</label>
+
+                        <input type="radio" class="btn-check" value="Economy" name="type" id="option2"
+                            autocomplete="off">
+                        <label class="btn btn-outline-success mx-2" for="option2">E</label>
+                    </div>
+                    <input type="submit" value="{{_'search'}}">
+                </div>
+            </div>
+
+        </form>
+        {{ /with}}
+    </div>
+</template>

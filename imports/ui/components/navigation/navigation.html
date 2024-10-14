@@ -1,0 +1,41 @@
+<template name="navigation">
+
+    <nav class="navigation">
+        <!-- BrandName -->
+        <a class="brandName" href="/">
+            <i class="fa-solid fa-paper-plane" style="color: #b760ee;"></i>
+            <span>Cheap Fly</span>
+        </a>
+        
+        {{#if getMeteorUser}}
+        {{#with getMeteorUser}}
+        <div class="navItem" style="width: 70%; ">
+            
+            <a href="/personal-accounts"> <i class="fa-regular fa-address-card"></i> {{_"myTicket"}}</a>
+            <span> <i class="fa-solid fa-sack-dollar"></i>{{this.profile.amount}} AZN</span>
+            <div class="signUp" style="width: 49%;">
+                <a class="nickName"><i class="fa-solid fa-user"></i>{{this.profile.fName}} {{this.profile.lName}}</a>
+                <a class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>{{_"logout"}}</a>
+                <select id="lng" style="width:10%;" class="form-control">
+            <option selected="{{isCurrentLng 'az'}}" value="az">AZ</option>
+            <option selected="{{isCurrentLng 'en'}}" value="en">EN</option>
+            <option selected="{{isCurrentLng 'ru'}}" value="ru">RU</option>
+        </select>
+            </div>
+        </div>
+        {{/with}}
+        {{else }}
+        <div class="navItem" style="width: 65%;  ">
+            <div class="signUp"  style="width: 49%;">
+                <a href="/signUp">{{_"signUp"}}</a>
+                <a href="/login">{{_"login"}}</a>
+                <select id="lng" style="width:10%;" class="form-control">
+                    <option selected="{{isCurrentLng 'az'}}" value="az">AZ</option>
+                    <option selected="{{isCurrentLng 'en'}}" value="en">EN</option>
+                    <option selected="{{isCurrentLng 'ru'}}" value="ru">RU</option>
+                </select>
+            </div>
+        </div>
+        {{/if}}
+    </nav>
+</template>

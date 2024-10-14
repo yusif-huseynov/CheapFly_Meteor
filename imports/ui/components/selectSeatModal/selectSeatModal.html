@@ -1,0 +1,38 @@
+<template name="selectSeatModal">
+    <div class="modal fade" id="selectSeatModal" tabindex="-1" role="dialog" aria-labelledby="selectSeatModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{_"selectSeat"}}</h5>
+                    <button type="button" class="close btn text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <h4 class="text-center">{{_"endPlane"}}</h4>
+                    <div class="d-flex seat-container">
+                        {{#each getSeats}}
+                        <div class="seat {{checkSelected this}} {{checkBusiness}}" width="50px" data-toggle="tooltip"
+                            title="Seat {{this}}" data-placement="top">
+                            <svg id="Layer_1" class="{{checkSelected this}}" data-name="Layer 1"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.9 121.08">
+                                <rect x="0.5" y="22.67" width="97.9" height="97.9" rx="12"
+                                    style="fill:#fff;stroke:#231f20;stroke-miterlimit:10" />
+                                <rect x="18.11" y="0.5" width="64.69" height="46.85" rx="12"
+                                    style="fill:#fff;stroke:#231f20;stroke-miterlimit:10" />
+                            </svg>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <h4 class="text-center">{{_"startPlane"}}</h4>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="comfirm-seat">{{_"confirm"}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

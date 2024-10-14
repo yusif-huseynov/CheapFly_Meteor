@@ -1,0 +1,37 @@
+<template name="personalAccounts">
+    <table class="table px-2 table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Flight Date</th>
+            <th>Baggage</th>
+            <th>Class</th>
+            <th>Price</th>
+            <th>Ticket</th>
+        </tr>
+
+        {{#each getOrderPassengers}}
+        <tr>
+            {{#with getPassenger passengerId}}
+            <td>{{firstName}}</td>
+            <td>{{lastName}}</td>
+            {{/with}}
+            {{#with getFlights orderId}}
+            <td>{{from}}</td>
+            <td>{{to}}</td>
+            <td>{{getDate date}}</td>
+            {{/with}}
+            <td>{{baggage}} kg</td>
+            {{#with getTicket orderId}}
+            <td>{{type}}</td>
+            <td>{{getTotalPrice price baggagePrice ../baggage}}</td>
+            {{/with}}
+            <td>
+                <button id="export" class="btn btn-primary">See</button>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</template>
